@@ -17,8 +17,7 @@ int add(const char *input)
 {
   int sum = 0;
   int num1,num2;
-  sscanf(input, "%d,%d", &num1,&num2);
-  if(check_input_zero(num1,num2))
+  if((sscanf(input, "%d,%d", &num1,&num2) == 2) && (check_input_zero(num1,num2)))
   {
     sum = num1+num2;
   } 
