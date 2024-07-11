@@ -21,7 +21,7 @@ void process_input(const char *input, int *sum)
   {
     sscanf(input, "%d\n%d,%d", &num1,&num2,&num3);
   }
-  find_the_sum(&num1,&num2,&num3,&sum);
+  find_the_sum(&num1,&num2,&num3,sum);
   
 }
 
