@@ -4,9 +4,9 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-void find_the_sum(int *num1,int *num2,int *num3,int *sum)
+void find_the_sum(int *num1,int *num2,int *num3,int **sum)
 {
-  *sum = *num1 + *num2 + *num3;
+  **sum = *num1 + *num2 + *num3;
 }
 
 void process_input(const char *input, int *sum)
@@ -21,7 +21,7 @@ void process_input(const char *input, int *sum)
   {
     sscanf(input, "%d\n%d,%d", &num1,&num2,&num3);
   }
-  find_the_sum(&num1,&num2,&num3,sum);
+  find_the_sum(&num1,&num2,&num3,&sum);
   
 }
 
