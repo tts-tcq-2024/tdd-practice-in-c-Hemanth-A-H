@@ -16,7 +16,7 @@ void process_input(const char *input, int *sum)
   {
       if(isdigit(input[i]))
       {
-          *sum = *sum + atoi(input[i]);
+          *sum = *sum + (input[i] - '0');
       }
     i++;
   }  
