@@ -10,11 +10,15 @@ void process_input(const char *input, int *sum)
   int num1 = 0;
   int num2 = 0;
   int num3 = 0;
+  int i = 0;
   int input_len = strlen(input);
-  while(*input && isdigit(*input))
+  while(i<input_len)
   {
-    *sum = *sum + atoi(*input);
-    *input++;
+      if(isdigit(input[i]))
+      {
+          *sum = *sum + input[i]
+      }
+    i++;
   }  
 }
 
