@@ -1,7 +1,7 @@
 #ifndef STRINGCALCULATOR_H
 #define STRINGCALCULATOR_H
 
-int add(char *input)
+int add(const char *input)
 {
   return -1;
 }
