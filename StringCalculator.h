@@ -4,23 +4,32 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-int check_input_zero(int num1, int num2)
+void find_the_sum(int *num1,int *num2,int *num3,int *sum)
 {
-  if((num1 == 0) && (num2 == 0))
-  {
-    return 0;
-  }
-  return 1;  
+  *sum = *num1 + *num2 + *num3;
 }
+
+void process_input(const char *input, int *sum)
+{
+  int num1,num2,num3 = 0;
+  int input_len = strlen(input);
+  if(input_len <= 3)
+  {
+    sscanf(input, "%d,%d", &num1,&num2);
+  }
+  else
+  {
+    sscanf(input, "%d\n%d,%d", &num1,&num2,&num3);
+  }
+  find_the_sum(&num1,&num2,&num3,&sum);
+  
+}
+
 
 int add(const char *input)
 {
   int sum = 0;
-  int num1,num2;
-  if((sscanf(input, "%d,%d", &num1,&num2) == 2) && (check_input_zero(num1,num2)))
-  {
-    sum = num1+num2;
-  } 
+  process_input(input,&sum);
   return sum;
 }
 
