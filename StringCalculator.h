@@ -11,7 +11,9 @@ void find_the_sum(int *num1,int *num2,int *num3,int **sum)
 
 void process_input(const char *input, int *sum)
 {
-  int num1,num2,num3 = 0;
+  int num1 = 0;
+ `int num2 = 0;
+  int num3 = 0;
   int input_len = strlen(input);
   if(input_len <= 3)
   {
